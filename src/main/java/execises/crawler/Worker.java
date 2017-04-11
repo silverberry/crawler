@@ -17,13 +17,10 @@ public class Worker extends UntypedActor {
     private final AsyncHttpClient asyncHttpClient = new DefaultAsyncHttpClient();
     private final URL url;
     private final int depth;
-    private final URL domain;
 
     Worker(URL url, int depth) throws MalformedURLException {
         this.url = url;
         this.depth = depth;
-        // Hint: Determining the URL's domain may be helpful if there are any relative URLs within.
-        this.domain = // TODO
     }
 
     public void onReceive(Object message) throws Exception {
