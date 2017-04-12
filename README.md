@@ -12,4 +12,6 @@ The following method is of paramount importance in filling in the TODO sections:
 
 Here, the "this" ActorRef instance on which the method is called references the recipient actor. The "sender" argument references the sender. The "message" argument is the message. Note that "self()" can be called on an actor to obtain an ActorRef reference to oneself.
 
+Note that each actor runs in a separate thread (from the thread pool coming with the actor system), so you don't have to worry about synchronizing the operations inside each actor. Exchanging messages between the actors is thread-safe.
+
 See also: [Akka Documentation on ActorRef](http://doc.akka.io/api/akka/2.5/akka/actor/ActorRef.html)
