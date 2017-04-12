@@ -18,7 +18,7 @@ public class Worker extends UntypedActor {
     private final URL url;
     private final int depth;
 
-    Worker(URL url, int depth) throws MalformedURLException {
+    Worker(URL url, int depth) {
         this.url = url;
         this.depth = depth;
     }
